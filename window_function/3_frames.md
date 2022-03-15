@@ -53,7 +53,7 @@
     range between current row  and 10 following  
     )
     ```
- **Задача 5**
+- **Задача 5**
 <br>Есть таблица сотрудников employees. Предположим, для каждого человека мы хотим определить 
  максимальную зарплату среди тех, у кого зарплата на 10–30 тыс. ₽ меньше чем у него:
 
@@ -65,7 +65,3 @@
     order by salary 
     range between 30 preceding  and 10 preceding  
     )
-  ```
-    
-    
-3_FRAMES.md
