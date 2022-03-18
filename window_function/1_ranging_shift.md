@@ -52,5 +52,26 @@
     ORDER BY city,salary, id) as tmp
     ```
 
-    
+- **Задача 5**
+<br>Посчитайте выручку для тарифа gold по месяцам 2020 года. Для каждого месяца дополнительно укажите:
+- выручку за предыдущий месяц (prev);
+- процент, который составляет выручка текущего месяца от prev (perc).
+
+  ```
+   SELECT *,
+       ROUND(revenue * 100 / prev) AS perc
+   FROM (
+         SELECT year,
+                month,
+                revenue,
+                lag(revenue, 1) OVER () AS prev
+         FROM sales
+         WHERE plan = 'gold'
+           AND year = '2020'
+             WINDOW w AS (
+                 PARTITION BY year,month
+                 )
+         ORDER BY year, month, revenue
+     ) AS fdsa
+    ```
     

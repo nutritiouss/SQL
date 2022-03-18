@@ -52,5 +52,19 @@
    order by year, month;
     ```
 
+- **Задача 5**
+<br> Посчитайте выручку нарастающим итогом по каждому тарифному плану за первые три месяца 2020 года.
+   ```
+   SELECT plan,
+       year,
+       month,
+       revenue,
+       sum(revenue) OVER (PARTITION BY plan ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS total
+  FROM sales
+  WHERE year = '2020'
+  AND month BETWEEN 1 AND 3
+  ORDER BY plan, month
+  ```
+
     
     
