@@ -1,4 +1,4 @@
-## Testovoe 1
+## Testovoe 2
 
 - **Задача 1**
 <br>Как удалить столбец temp из таблицы MyTable ?

@@ -53,7 +53,7 @@
     range between current row  and 10 following  
     )
     ```
- **Задача 5**
+- **Задача 5**
 <br>Есть таблица сотрудников employees. Предположим, для каждого человека мы хотим определить 
  максимальную зарплату среди тех, у кого зарплата на 10–30 тыс. ₽ меньше чем у него:
 
@@ -65,17 +65,3 @@
     order by salary 
     range between 30 preceding  and 10 preceding  
     )
-  ```
-
-
- **Задача 5**
-<br>Посчитайте скользящую среднюю выручку за 3 месяца для тарифа platinum в 2020 году.
-
-  ```
-   SELECT year,month, revenue, 
-   avg(revenue) over w as avg3m
-  FROM sales
-  WHERE year ='2020' AND plan = 'platinum'
-  window w as (partition by plan rows between 1 preceding and 1 following) 
-  ORDER BY plan,month
-  ```
