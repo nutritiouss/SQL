@@ -64,12 +64,10 @@
     WINDOW w as (
     order by salary 
     range between 30 preceding  and 10 preceding  
-    )
-<<<<<<< dev
+
   ```
 
-
- **Задача 6**
+**Задача 6**
 <br>Посчитайте скользящую среднюю выручку за 3 месяца для тарифа platinum в 2020 году.
 
   ```
